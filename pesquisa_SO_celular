@@ -1,0 +1,30 @@
+total_entrevistados = 0
+total_android = 0
+total_ios = 0
+idade_total = 0
+
+
+while True:
+
+    sistema_operacional = input('Qual o sistema operacional do seu celular? (Android/iOS) ')
+    idade = int(input('Qual a sua idade? '))
+
+    if sistema_operacional == 'ios':
+        total_ios += 1
+    elif sistema_operacional == 'android':
+        total_android += 1
+
+    idade_total += idade
+    total_entrevistados += 1
+
+    continuar = input('Deseja continuar a pesquisa? (s/n)? ')
+    if continuar == 'n':
+        break
+
+media_de_idade = idade_total / total_entrevistados
+
+print("Número total de entrevistados: ", total_entrevistados)
+print("Número total de usuários de Android: ", total_android)
+print("Número total de usuários de iOS: ", total_ios)
+print("Idade média dos entrevistados: ", media_de_idade)
+
